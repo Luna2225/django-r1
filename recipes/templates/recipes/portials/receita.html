@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+        integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css"
+        integrity="sha512-6mc0R607di/biCutMUtU9K7NtNewiGQzrvWX4bWTeqmljZdJrwYvKJtnhgR+Ryvj+NRJ8+NnnCM/biGqMe/iRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Receita</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    /* * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    } */
+    body {
+        background-color: #E9967A;
+        font-size: 1.6rem;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    .main-header-container {
+        background: #A52A2A;
+    }
+
+    .main-logo {
+        font-family: 'Kaushan Script';
+        font-size: 4rem;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        grid-gap: 6px 9px;
+        font-weight: 600;
+    }
+
+    img {
+        border-radius: 20px;
+        width: 300px;
+        margin-left: 50px;
+
+    }
+
+    /* #name {
+        background-color: white;
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    } */
+
+    p,
+    li {
+        font-family: 'Roboto Slab';
+    }
+
+    /* #name h1,
+h2 {
+    margin: 0;
+} */
+
+    h1,
+    h2,
+    h3 {
+        text-transform: uppercase;
+        font-family: 'Hubballi', cursive;
+    }
+
+    #conteiner {
+        grid-template-columns: 30% auto;
+        display: grid;
+        grid-column-gap: 20px;
+
+    }
+
+    #sidebar,
+    #content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card h3 {
+        font-family: 'Hubballi', cursive;
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .data {
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        border: 3px solid #A52A2A;
+        width: 140px;
+        left: 80%;
+        position: relative;
+        background: #FA8072;
+
+    }
+
+    .card {
+        font-family: montserrat;
+        border: 3px solid #A52A2A;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .i {
+        list-style-type: none;
+    }
+
+    .modo {
+        margin-top: 60px;
+    }
+
+    .card-title {
+        font-family: montserrat;
+        border: 3px solid #A52A2A;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .hr {
+        width: 400px;
+    }
+</style>
+
+<body>
+    <header class="main-header-container">
+        <div class="main-header-container">
+                <a class="main-logo" href="{% url 'home' %}">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span>{{name}}'s Lasanha</span></a>
+        </div>
+    </header>
+
+    <div id="content">
+        <div class="card-title">
+            <h1 class="title">Lasanha de Carne Moída</h1>
+            <hr class="hr">
+            <h3 class="data">04/06/2021</h3>
+        </div>
+        <div id="conteiner">
+            <div id="sidebar">
+                <div class="img">
+                    <img src="https://achougastronomia.com.br/wp-content/uploads/2022/01/Receita-de-lasanha-de-carne.jpg">
+                </div>
+                <div class="card">
+                    <h3>Informações do autor da receita</h3>
+                    <hr>
+                    <ul id="">
+                        <li><b>Nome:</b> Luana</li>
+                        <li><b>Profissão:</b> Cozinheira</li>
+                        <li><b>Email:</b> Lunnasantanna@gmail.com</li>
+                        <li><b>Facebook:</b> <a target="_blank" href="https://www.facebook.com/achougastronomia">Receita-de-lasanha-de-carne</a></li>
+                        <li><b>Instagram:</b> <a target="_blank"
+                                href="https://www.instagram.com/achougastronomia/">achougastronomia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="ingredientes">
+                    <h3>Ingredientes</h3>
+                    <hr>
+                    <ul>
+                        <li>500 gramas de Massa de lasanha</li>
+                        <li>500 gramas de Carne moída</li>
+                        <li>2 caixas de Creme de leite</li>
+                        <li>3 colheres de Manteiga</li>
+                        <li>3 colheres de Farinha de trigo</li>
+                        <li>500 gramas de Mussarela</li>
+                        <li>Sal a gosto</li>
+                        <li>2 copos de Leite</li>
+                        <li>1 Cebola ralada</li>
+                        <li>3 colheres de Óleo</li>
+                        <li>1 caixa de Molho de tomate</li>
+                        <li>3 dentes de Alho amassados</li>
+                        <li>1 pacote de Queijo ralado</li>
+                    </ul>
+
+                    <h3>Modo de Preparo</h3>
+                    <hr>
+                    <p>Passo 1: Massa:
+                        Cozinhe a massa segundo as orientações do fabricante, despeje em um refratário com água gelada para não grudar e reserve..</p>
+                    <p>Passo 2: Molho:
+                        Refogue o alho, a cebola, a carne moída, o molho de tomate, deixe cozinhar por 3 minutos e reserve.</p>
+                    <p>Passo 3:Molho Branco:
+                        Derreta a margarina, coloque as 3 colheres de farinha de trigo e mexa;
+                        Despeje o leite aos poucos e continue mexendo;
+                        Por último, coloque o creme de leite, mexa por 1 minuto e desligue o fogo.</p>
+                    <p>Passo 4: Montagem:
+                        Despeje uma parte do molho à bolonhesa em um refratário, a metade da massa, a metade do presunto, a metade da mussarela, todo o molho branco e o restante da massa;
+                        Repita as camadas até a borda do recipiente;
+                        Finalize com o queijo ralado e leve ao forno alto (220° C), preaquecido, por cerca de 20 minutos.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Patrocinadores e criadores do site</h3>
+            <hr>
+
+            <p>Lasanha de Carne Italiana</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
